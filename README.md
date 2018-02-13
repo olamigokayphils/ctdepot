@@ -16,3 +16,5 @@ I implemented this on a basic-themed website. with little CSS "styling; Afterall
 A chicken and turkey depot; where users can login and  get to see the current available meat in stock , refreshed every 10s.. make orders and track orders..However as at the time of posting and the writing of this "ReadMe".. i haven't implemented the making of orders and Tracking Orders.. This application is a mirror app to one of coming project and this is more like a study tool. 
 
 Feel free to contribute.. Working on the the Order and tracking of Order models, so also the Admin's wallet etc. 
+
+*I worked on this with Django 2.0*
