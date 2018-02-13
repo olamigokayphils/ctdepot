@@ -1,9 +1,11 @@
 # ctdepot
-*Deploying ajax.js with Dajngo to query the database and make a real-time update to the frontend without refreshing the Page
-*Customizing Django default authentication methods
-*Creating customer orders
-*Tracking Orders
-*Admin's wallet
+*Deploying ajax.js with Dajngo to query the database and make a real-time update to the frontend without refreshing the Page*;
+
+*Customizing Django default authentication methods*;
+
+*Creating customer orders*;
+*Tracking Orders*;
+*Admin's wallet*;
 
 
 This is a basic task i want to share with persons about getting updates on page without users having to refresh the page. I achieved this using AJax request. 
