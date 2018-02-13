@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+
+	<nav>
+  		<ul>
+    		<li><a href="#">Chicken</a></li>
+    		<li><a href="#">Turkey</a></li>
+    		<li><a href="#">Chickey Specials</a></li>
+    		<li><a href="#">Buffet+</a></li>
+    		<li><a href="{% url 'login' %}">Login</a></li>
+    		<li><a href="{% url 'signup' %}">Sign Up</a></li>
+
+  		</ul>
+	</nav>
+
+	<section>
+ 		<h1>Check out our Menu:</h1>
+    	<p>
+  			<ul>
+  				<li><a href="#">WOG[whole chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Tenderloin [chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Thigh [chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Drumstick [chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Whole wing [chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Breast Fillet [chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Tenders [chicken/turkey]</a> | Grilled & Fried</li>
+  				<li><a href="#">Legs [chicken/turkey]</a> | Grilled & Fried</li>
+
+  			</ul>
+  		<p>
+  			<h2><a href="{% url 'login' %}">Sign in </a></h2>
+  		</p>
+	</section>
+
+</div>
+{% endblock %}

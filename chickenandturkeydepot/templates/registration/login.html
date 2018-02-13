@@ -1,0 +1,40 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+	<p class="error">Your username and/or password isn't correctly entered. Please try again.</p>
+    
+{% endif %}
+
+<div class="col-sm-10">
+    <h2>Log in</h2>
+	<form method="post" action="{% url 'login' %}">
+    	{% csrf_token %}
+
+    	<div class="main">
+        	<td>{{ form.username.label_tag }}</td>
+        	<td>{{ form.username }}</td>
+        	<br>
+        	<td>{{ form.password.label_tag }}</td>
+        	<td>{{ form.password }}</td>
+
+        	<br>
+        	<label>
+            	<input type="checkbox" checked="checked">Remember me
+        	</label>
+        	<br>
+        	<input type="submit" value="login" />
+        	<input type="hidden" name="next" value="{{ next }}" />
+
+        </div>
+
+    	<div class="container">
+    	   <p><a href="{% url 'password_reset' %}">Having trouble logging in?</a></p>
+    	   <p>or</p>
+    	   <p><a href="{% url 'signup' %}">Sign Up for Free</a></p>
+    	</div>
+	</form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,56 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="container">
+
+	<nav>
+  		<ul>
+    		<li><a href="#">Chicken</a></li>
+    		<li><a href="#">Turkey</a></li>
+    		<li><a href="#">Chickey Specials</a></li>
+    		<li><a href="#">Buffet+</a></li>
+    		<li><a href="#">Special Offers</a></li>
+    		<li><a href="#">Track my Orders</a></li>
+    		<li><a href="{% url 'logout' %}">Logout</a></li>
+
+  		</ul>
+	</nav>
+
+	<section>
+    	<h4>User: {{ user.get_username }}</h4>
+		  <h1>Currently we have the following in stock:</h1>
+      <div>
+        <p>A total number of {{ number_of_meat }} <a href="#">items</a> in stock. <a href="#">Click to view items</a> </p>
+      </div>
+      {% if number_of_meat <= 0 %}
+        <p>There are no meat in stock yet.</p>
+      {% endif %}
+
+    	<ul>
+      	<section class="pt100 pb100">
+    		<div class="container">
+        		<div class="vertical-align">
+            		<div class="col-md-12">
+                 		<table class="table table-striped">
+                    		<thead>
+                        		<tr>
+                            		<th>MEAT_TYPE</th>
+                            		<th>CUT_TYPE</th>
+                            		<th>WEIGHT</th>
+                            	</tr>
+                       		</thead>
+                       		<tbody id="dynamic">
+
+                       		</tbody>
+                		</table>
+            		</div>
+        		</div>
+    		</div>
+		</section>
+
+    	</ul>
+	</section>
+{% endblock %}
+
+
+

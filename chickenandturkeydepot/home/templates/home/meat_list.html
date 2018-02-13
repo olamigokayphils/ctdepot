@@ -1,0 +1,68 @@
+<!--- #meatlist in this application is disposabel i added it at first because i thought, to highlight the content
+	of a Model i necessarily needed a Redirect view to get it.. Yes!  it worked but, i descoverd that without it, using, request functions, Ajax, Json etc.. working all together you can actually pull out those stuff from the Model..
+
+	So i decided to comment out this whole document and not delete it for learning purpose..
+
+	Originally it's the link on the ctdepot page "click to view" that linked this page..
+
+{% extends "base_generic.html" %}
+
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container">
+
+	<nav>
+  		<ul>
+    		<li><a href="#">Chicken</a></li>
+    		<li><a href="#">Turkey</a></li>
+    		<li><a href="#">Chickey Specials</a></li>
+    		<li><a href="#">Buffet+</a></li>
+    		<li><a href="#">Special Offers</a></li>
+    		<li><a href="#">Track my Orders</a></li>
+    		<li><a href="{% url 'logout' %}">Logout</a></li>
+
+  		</ul>
+	</nav>
+
+	<section>
+    	<h4>User: {{ user.get_username }}</h4>
+		<h1>Currently we have the following in stock:</h1>
+
+
+    	{% if meat_list %}
+    	<ul>
+      	<section class="pt100 pb100">
+    		<div class="container">
+        		<div class="vertical-align">
+            		<div class="col-md-12">
+                 		<table class="table table-striped">
+                    		<thead>
+                        		<tr>
+                            		<th>MEAT_TYPE</th>
+                            		<th>CUT_TYPE</th>
+                            		<th>WEIGHT</th>
+                            	</tr>
+                       		</thead>
+                       		<tbody id="dynamic">
+
+                       		</tbody>
+                		</table>
+            		</div>
+        		</div>
+    		</div>
+		</section>
+
+    	</ul>
+    	{% else %}
+      		<p>There are no books in the library.</p>
+    	{% endif %}
+	</section>
+{% else %}
+     <p class="col-sm-10" style="text-align: center;"><a href="{% url 'login'%}?next={{request.path}}"> Click to Login </a></p>   
+{% endif %}
+
+{% endblock %}
+!-->
+

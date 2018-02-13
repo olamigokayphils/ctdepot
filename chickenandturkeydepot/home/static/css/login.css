@@ -1,0 +1,31 @@
+.background {
+	width: 100%;
+}
+body {
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	-o-background-size:cover;
+	background-attachment: fixed;
+}
+
+}
+
+input[type=text], input[type=password] {
+    width: 27%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	opacity: 10%;
+}
+
+.container{
+	border: none;
+	outline: none;
+    margin: none;    
+    padding: none;
+	text-align: center;
+}

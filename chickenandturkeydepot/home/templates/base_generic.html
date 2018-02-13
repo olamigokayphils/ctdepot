@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	{% block title %}<title>ChickenandTurkey</title>{% endblock %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body>
+	<div class="container">
+
+		<header>
+   			<h1>ChickenandTurkeyDepot</h1><br> <h6>Taste the goodness</h6>
+		</header>
+	</div>
+	<div>
+    	{% block content %}{% endblock %}
+    </div>
+	<footer>Copyright &copy; ChickenandTurkey.com</footer>
+	<!-- The function(data).. the parameter inside of it could bear anyname.. it's just the name to capture the success request from the view function !-->
+	<script>
+
+    setInterval(function() {
+    	$("#dynamic").empty()
+        $.ajax({
+            method: "GET",
+            url: "/home/ctdepot/",
+            dataType: "json",
+            success: function(data) {
+            	obj = JSON.parse(data)
+            	for (value in obj){
+            		console.log(value);
+            	 $("#dynamic").append(
+                       "<tr><td>" + obj[value].data1 + "</td><td>" + obj[value].data2 + "</td><td>" + obj[value].data3 + "</td><td>"
+                    )
+            	}
+            },
+            error: function(data) {
+                console.log("error")
+                console.log(data)
+            }
+        })
+    },10000)
+</script>s
+
+</body>
+</html>

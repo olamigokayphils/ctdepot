@@ -1,0 +1,7 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Logged out!</h2>
+
+<p><a href="{% url 'login'%}">Click here to login again.</a> | Go to <a href="{% url 'index' %}">Home Page</a></p>
+{% endblock %}
